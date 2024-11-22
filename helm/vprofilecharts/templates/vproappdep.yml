@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: vproapp
-        image: ({{ .Values.appimage}}:{{ .Values.apptag}})
+        image: {{ .Values.appimage}}:{{ .Values.apptag}}
         ports:
-      - name: vproapp-port
-        containerPort: 8080
+        - name: vproapp-port
+          containerPort: 9080
       initContainers:
       - name: init-mydb
         image: busybox
